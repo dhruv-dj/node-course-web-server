@@ -53,6 +53,14 @@ app.get('/about', (req,res) => {
    });
 });
 
+app.get('/projects', (req,res) => {
+   res.render('projects.hbs', {
+       pageTitle: 'Project Page',
+       currentYear: new Date().getFullYear(),
+       welcomeMessage: 'Here you will find the link to all my projects'
+   });
+});
+
 app.get('/bad', (req,res) => {
     res.send({
        errorCode : '404',
